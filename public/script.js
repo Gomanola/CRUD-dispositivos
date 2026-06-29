@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/asignaciones';
+const API_URL = '/api/asignaciones';
 
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab-content');

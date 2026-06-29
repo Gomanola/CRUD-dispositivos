@@ -1,4 +1,13 @@
 {
   "name": "CRUD de dispositivos",
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "yarn@4.17.0",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.2",
+    "remove": "^0.1.5"
+  }
 }

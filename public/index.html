@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Dispositivos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD Dispositivos</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="crear">Crear</button>
+            <button class="tab-button" data-tab="listar">Listar</button>
+            <button class="tab-button" data-tab="buscar">Buscar</button>
+            <button class="tab-button" data-tab="actualizar">Actualizar</button>
+            <button class="tab-button" data-tab="eliminar">Eliminar</button>
+        </div>
+
+        <!-- TAB CREAR -->
+        <div id="crear" class="tab-content active">
+            <h2>Crear Asignación</h2>
+            <form id="formCrear">
+
+                <label>Nombre:</label>
+                <input type="text" id="crearNombre" required>
+
+                <label>Hardware:</label>
+                <input type="text" id="crearHardware" required>
+
+                <label>Modelo:</label>
+                <input type="text" id="crearModelo" required>
+
+                <label>Marca:</label>
+                <input type="text" id="crearMarca" required>
+
+                <label>Descripción:</label>
+                <textarea id="crearDescripcion" required></textarea>
+
+                <button type="submit">Crear</button>
+            </form>
+            <div id="respuestaCrear" class="respuesta"></div>
+        </div>
+
+        <!-- TAB LISTAR -->
+        <div id="listar" class="tab-content">
+            <h2>Listar Todas las Asignaciones</h2>
+            <button onclick="listarTodas()">Cargar</button>
+            <div id="respuestaListar" class="respuesta"></div>
+            <table id="tablaListar">
+                <thead>
+                    <tr>
+                        <th>ID Mongo</th>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Hardware</th>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTablaListar"></tbody>
+            </table>
+        </div>
+
+        <!-- TAB ACTUALIZAR -->
+        <div id="actualizar" class="tab-content">
+            <h2>Actualizar Asignación</h2>
+            <label>ID MongoDB:</label>
+            <input type="text" id="actualizarId" placeholder="ID MongoDB a actualizar">
+
+            <label>Nombre:</label>
+            <input type="text" id="actualizarNombre">
+
+            <label>Hardware:</label>
+            <input type="text" id="actualizarHardware">
+
+            <label>Modelo:</label>
+            <input type="text" id="actualizarModelo">
+
+            <label>Marca:</label>
+            <input type="text" id="actualizarMarca">
+
+            <label>Descripción:</label>
+            <textarea id="actualizarDescripcion"></textarea>
+
+            <button onclick="actualizar()">Actualizar</button>
+            <div id="respuestaActualizar" class="respuesta"></div>
+        </div>
+
+        <!-- TAB ELIMINAR -->
+        <div id="eliminar" class="tab-content">
+            <h2>Eliminar Asignación</h2>
+            <label>ID MongoDB:</label>
+            <input type="text" id="eliminarId" placeholder="ID MongoDB a eliminar">
+            <button onclick="eliminar()">Eliminar</button>
+            <div id="respuestaEliminar" class="respuesta"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
